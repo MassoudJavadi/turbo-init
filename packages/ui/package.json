@@ -1,17 +1,19 @@
 {
-  "name": "@repo/ui",
+  "name": "@seller-turbo/ui",
   "version": "0.0.0",
   "type": "module",
   "private": true,
   "exports": {
-    "./button": "./src/button.tsx",
-    "./card": "./src/card.tsx",
-    "./code": "./src/code.tsx"
+    "./providers/RootProvider": "./src/providers/RootProvider.tsx",
+    "./providers/theme/ThemeContext": "./src/providers/theme/ThemeContext.tsx"
   },
   "scripts": {
     "lint": "eslint . --max-warnings 0",
     "generate:component": "turbo gen react-component",
-    "check-types": "tsc --noEmit"
+    "check-types": "tsc --noEmit",
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "clean": "turbo run clean"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
@@ -24,6 +26,8 @@
   },
   "dependencies": {
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "daisyui": "latest",
+    "class-variance-authority": "^0.7.0"
   }
 }

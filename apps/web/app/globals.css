@@ -48,3 +48,17 @@ a {
     display: unset;
   }
 }
+
+@layer base {
+  :root {
+    --primary-100: theme("colors.primary.100");
+    --primary-500: theme("colors.primary.500");
+    /* Add all color variables */
+  }
+
+  .dark {
+    --primary-100: theme("colors.primary.900");
+    --primary-500: theme("colors.primary.500");
+    /* Add all dark mode color variables */
+  }
+}

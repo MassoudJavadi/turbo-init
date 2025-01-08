@@ -1,5 +1,5 @@
 {
-  "name": "sellerTurbo",
+  "name": "seller-turbo",
   "private": true,
   "scripts": {
     "build": "turbo build",
@@ -8,12 +8,24 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
     "prettier": "^3.2.5",
+    "tailwindcss": "^3.4.17",
     "turbo": "^2.3.3",
     "typescript": "5.5.4"
   },
   "packageManager": "pnpm@9.0.0",
   "engines": {
     "node": ">=18"
-  }
+  },
+  "dependencies": {
+    "@tanstack/react-query": "^5.62.16",
+    "daisyui": "^4.12.23",
+    "zustand": "^5.0.2"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ]
 }
